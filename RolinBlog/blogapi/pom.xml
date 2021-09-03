@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--1.    parent用父工程的pom，不再直接依赖于springboot的起步依赖-->
+    <parent>
+        <groupId>com.rolin</groupId>
+        <artifactId>blog</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath/><!-- lookup parent from repository -->
+    </parent>
+
+    <!--2.    设置子模块的包-->
+    <packaging>jar</packaging>
+
+    <!--3.    使用删除子模块的groupId-->
+    <!--    <groupId>com.rolin</groupId>-->
+    <artifactId>blogapi</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>blogapi</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
+    <dependencies>
+        <!--        继承了父类工程的依赖，也可以添加子工程自己的独有依赖-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter</artifactId>-->
+        <!--        </dependency>-->
+
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
